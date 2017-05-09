@@ -53,7 +53,7 @@
 				<div class="col-md-4 col-sm-4">
 			      <h3>Diabetes Disease Prediction</h3>
 			      <div class="space"></div>					
-			      <p>There is a high probability of you getting {{value}}.Please visit the hospitals nearby to get the checkup done.</p>
+			      <p>{{value}}</p>
 			    </div>
 			</div>
 		</div>
@@ -78,7 +78,7 @@
 	</footer>
 
 <script>
-$( "#map" ).change(function() {
+$(function() {
 alert("");
 var _data = $('#my-data').data();
 if(_data.indexOf("Congratulations!!") >= 0)
