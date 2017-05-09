@@ -82,7 +82,7 @@ def diabetesClassifier():
     y_pred = diab_dt.predict(X_test)
     output= int(y_pred[0])
     if output == 0:
-        return render_template('diabetesPrediction.html',value ="Congratulations!! You are safe from diabetes")
+        return render_template('diabetesPrediction.html',value ="Congratulations!! You are safe from diabetes.Keep visiting nearby hospitals for regular checkups.")
     else:
         return render_template('diabetesPrediction.html',value ="There are high chances of having diabetes. Please visit nearby hospital soon.")
 
@@ -115,7 +115,7 @@ def heartDiseaseClassifier():
     output= int(y_pred[0])
 
     if output == 0:
-        return render_template('heartDiseasePrediction.html',value ="Congratulations!! You are safe from heart disease")
+        return render_template('heartDiseasePrediction.html',value ="Congratulations!! You are safe from heart disease.Keep visiting nearby hospitals for regular checkups.")
     else:
         return render_template('diabetesPrediction.html',value ="There are high chances of having heart disease. Please visit nearby hospital soon.")
 
@@ -191,7 +191,7 @@ def cancerClassifier():
 	#print metrics.accuracy_score(prediction,test_Y)
 	output= int(prediction[0])
 	if output == 0:
-		return render_template('cancerPrediction.html',value ="Congratulations!! You are safe from cancer  ")
+		return render_template('cancerPrediction.html',value ="Congratulations!! You are safe from cancer.Keep visiting nearby hospitals for regular checkups.  ")
 	else:
 		return render_template('cancerPrediction.html',value ="There are high chances of having cancer. Please visit nearby hospital soon.")
 
