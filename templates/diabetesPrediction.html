@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Medilab Free Bootstrap HTML5 Template</title>
+    <title>Medilab</title>
     <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
     
@@ -13,7 +13,8 @@
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIAOpI7e8m8ULpHENL5yxDRlORZPkX8nI&libraries=places&callback=initMap" async defer></script>
  <script src="../static/js/gmap.js"></script>
- </head>   
+ </head>  
+ 
   <body id="myPage2" data-spy="scroll" data-target=".navbar" data-offset="60">
 	<section id="banner" class="banner">
 		<div class="bg-color">
@@ -42,7 +43,7 @@
 			</nav>
  </div>
  </section>
-<section id="contact" class="section-padding">
+<section id="contact" class="section-padding custom">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -58,7 +59,7 @@
 		</div>
 	</section>
 
-<section>
+<section class="custom">
 <div id="map"></div>
 
 </section>
@@ -76,7 +77,14 @@
 		</div>
 	</footer>
 
-
+<script>
+$( "#map" ).change(function() {
+alert("");
+var _data = $('#my-data').data();
+if(_data.indexOf("Congratulations!!") >= 0)
+$( "#map").hide();
+});
+</script>
 	
 	    <script src="../static/js/jquery.min.js"></script>
     <script src="../static/js/jquery.easing.min.js"></script>

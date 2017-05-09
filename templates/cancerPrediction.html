@@ -11,9 +11,11 @@
     <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIAOpI7e8m8ULpHENL5yxDRlORZPkX8nI&libraries=places&callback=initMap" async defer></script>
+ <script src="../static/js/gmap.js"></script>
 
   </head>
-  
+
   <body id="myPage2" data-spy="scroll" data-target=".navbar" data-offset="60">
 	<section id="banner" class="banner">
 		<div class="bg-color">
@@ -42,57 +44,26 @@
 			</nav>
  </div>
  </section>
-<section id="contact" class="section-padding">
+<section id="contact" class="section-padding custom">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2 class="ser-title">Enter the patients details</h2>
+					<h2 class="ser-title">For the patients details provided</h2>
 					<hr class="botm-line">
 				</div>
 				<div class="col-md-4 col-sm-4">
-			      <h3>Breast Cancer Prediction</h3>
+			      <h3>Cancer Prediction</h3>
 			      <div class="space"></div>
-			      <p></p>
+			      <p>{{value}}</p>
 			    </div>
-				<div class="col-md-8 col-sm-8 marb20">
-					<div class="contact-info">
-						
-							<div class="space"></div>
-                            <div id="sendmessage">Your message has been sent. Thank you!</div>
-                            <div id="errormessage"></div>
-							<form action="/cancerPredictionPage" method="post" role="form" class="contactForm">
-							    <div class="form-group">
-                                    <input type="text" name="concave points_worst" class="form-control br-radius-zero" id="name" placeholder="Concave points" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control br-radius-zero" name="radius_worst" id="attr1" placeholder="Radius" data-rule="email" data-msg="Please enter a valid email" />
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control br-radius-zero" name="area_worst" id="subject" placeholder="Area" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                    <div class="validation"></div>
-                                </div>
-								<div class="form-group">
-                                    <input type="text" class="form-control br-radius-zero" name="perimeter_worst" id="subject" placeholder="Perimeter" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                    <div class="validation"></div>
-                                </div>
-								<div class="form-group">
-                                    <input type="text" class="form-control br-radius-zero" name="concavity_worst" id="subject" placeholder="Concavity" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                    <div class="validation"></div>
-                                </div>
-									
-                              
-                                
-								<div class="form-action">
-									<button type="submit" class="btn btn-form">Submit</button>
-								</div>
-							</form>
-					</div>
-				</div>
 			</div>
 		</div>
 	</section>
+
+<section class="custom">
+<div id="map" data-name="{{value}}"></div>
+
+</section>
 
 
 <footer id="footer">
@@ -100,20 +71,27 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
-						Copyright Team Data Miners. All Rights Reserved
+					Copyright Team Data Miners. All Rights Reserved
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
-	
+
+
+	<script>
+$( "#map" ).change(function() {
+alert("");
+var _data = $('#my-data').data();
+if(_data.indexOf("Congratulations!!") >= 0)
+$( "#map").hide();
+});
+</script>
 	    <script src="../static/js/jquery.min.js"></script>
     <script src="../static/js/jquery.easing.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
     <script src="../static/js/custom.js"></script>
     <script src="../static/contactform/contactform.js"></script>
-     
- 
     
   </body>
 </html>
